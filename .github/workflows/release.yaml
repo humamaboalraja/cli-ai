@@ -1,19 +1,25 @@
 name: Release
 on:
+  workflow_dispatch:
   release:
     types: [created]
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      packages: write
+      contents: read
     steps:
-      - uses: actions/checkout@v3
-      - name: Cached Dependencies action
+      - name: Checkout
         uses: actions/checkout@v3
-      - name: Load & cache dependencies
-        id: cached-dependencies
-        uses: ./.github/actions/dependencies-cache
+      - name: Setup Node
+        uses: actions/setup-node@v3
         with:
-          caching: 'false'
-      - run: npm publish
+          node-version: 18
+          registry-url: 'https://registry.npmjs.org'
+      - name: Install dependencies and build 🔧
+        run: yarn install --frozen-lockfile && yarn build
+      - name: 📦 Publish package
+        run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_REGISTRY_ACCESS_TOKEN }}

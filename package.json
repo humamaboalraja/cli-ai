@@ -9,7 +9,7 @@
     "cli-ai",
     "cli"
   ],
-  "version": "0.1.1",
+  "version": "0.1.2",
   "license": "BSD-3-Clause",
   "main": "bin/app.js",
   "repository": "git@github.com:humamaboalraja/cli-ai.git",
@@ -17,6 +17,9 @@
     "url": "https://github.com/humamaboalraja/cli-ai/issues"
   },
   "homepage": "https://github.com/humamaboalraja/cli-ai",
+  "publishConfig": {
+    "@humamaboalraja:registry": "https://npm.pkg.github.com"
+  },
   "scripts": {
     "dev": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/app.ts",
     "build": "tsc -p .",

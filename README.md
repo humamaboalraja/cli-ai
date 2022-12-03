@@ -7,8 +7,9 @@
    </p>
    <div style="">
       <img src="https://github.com/humamaboalraja/cli-ai/actions/workflows/build.yaml/badge.svg" alt="CLI-AI Build status" />
-      <img src="https://img.shields.io/github/v/tag/humamaboalraja/cli-ai?label=release" alt="latest release by date " />
+      <span class="badge-npmversion"><a href="https://npmjs.org/package/cli-ai" title="View this project on NPM"><img src="https://img.shields.io/github/v/tag/humamaboalraja/cli-ai?label=npm" alt="latest release by date " /></a></span>
       <img src="https://img.shields.io/github/license/humamaboalraja/cli-ai?color=434158" alt="license" />
+      <img src="https://img.shields.io/github/downloads/humamaboalraja/cli-ai/total" alt="Total downloads"/>
    </div>
 </div>
 
