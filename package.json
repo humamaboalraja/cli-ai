@@ -1,7 +1,7 @@
 {
   "name": "cli-ai",
   "description": "A command line interface client for interacting with OpenAI's GPT3",
-  "author": "Humam Abo Alraja <humamaboalraja@gmail.com>",
+  "author": "humamaboalraja <humamaboalraja@gmail.com>",
   "keywords": [
     "ai",
     "openai",
@@ -31,10 +31,10 @@
     "docker_refresh": "yarn docker_clean && yarn docker_build && yarn docker_run"
   },
   "bin": {
-    "cli-ai": "./bin/app.js"
+    "cli-ai": "./build/app.js"
   },
   "pkg": {
-    "scripts": "bin/**/*.js",
+    "scripts": "build/**/*.js",
     "assets": [
       "node_modules/figlet/**/*.*",
       "node_modules/figlet/fonts/Standard.flf"
@@ -46,7 +46,7 @@
       "node18-linux-arm64",
       "node18-win-x64"
     ],
-    "outputPath": "build"
+    "outputPath": "releases"
   },
   "dependencies": {
     "chalk": "4.1.2",
@@ -58,14 +58,15 @@
     "typescript": "^4.9.3"
   },
   "devDependencies": {
-    "nodemon": "^2.0.20",
-    "@types/node": "^18.11.9",
     "@types/figlet": "^1.5.5",
+    "@types/node": "^18.11.9",
     "@typescript-eslint/eslint-plugin": "^5.45.0",
     "@typescript-eslint/parser": "^5.45.0",
     "dotenv": "^16.0.3",
     "eslint": "^8.28.0",
+    "nodemon": "^2.0.20",
     "pkg": "^5.8.0",
+    "release-it": "^15.5.1",
     "ts-node": "^10.9.1"
   }
 }

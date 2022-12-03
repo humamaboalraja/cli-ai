@@ -1,0 +1,28 @@
+{
+   "hooks": {
+      "before:init": "yarn lint",
+      "after:bump": "rm -rf releases && npx pkg package.json && cd releases && tar -czf cli-ai-linux-arm64.tar.gz cli-ai-linux-arm64 && tar -czf cli-ai-linux-x64.tar.gz cli-ai-linux-x64 && zip cli-ai-win-x64.zip cli-ai-win-x64.exe && zip cli-ai-macos-x64.zip cli-ai-macos-x64 && zip cli-ai-macos-arm64.zip cli-ai-macos-arm64",
+      "after:release": "echo Successfully released v${version}."
+   },
+   "git": {
+      "tag": true,
+      "commitMessage": "chore: release v${version}"
+   },
+   "github": {
+      "release": true,
+      "web": true,
+      "assets": [
+         "releases/*"
+      ]
+   },
+   "npm": {
+      "publish": true
+   },
+   "plugins": {
+      "@release-it/conventional-changelog": {
+         "infile": "CHANGELOG.md",
+         "preset": "eslint",
+         "header": "# Changelog"
+      }
+   }
+}

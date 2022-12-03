@@ -1,5 +1,7 @@
 node_modules
-bin
+build
 .DS_Store
 yarn.lock
 .vscode
+.env
+releases

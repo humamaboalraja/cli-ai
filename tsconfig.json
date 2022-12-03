@@ -8,7 +8,7 @@
     "moduleResolution": "node",
     "types": ["node"],
     "sourceMap": true,
-    "outDir": "bin",
+    "outDir": "build",
     "baseUrl": ".",
     "paths": {
       "*": ["node_modules/*", "src/types/*"]
