@@ -1,0 +1,67 @@
+{
+  "name": "cli-ai",
+  "description": "A command line interface client for interacting with OpenAI's GPT3",
+  "author": "Humam Abo Alraja <humamaboalraja@gmail.com>",
+  "keywords": [
+    "ai",
+    "openai",
+    "GPT3",
+    "cli-ai",
+    "cli"
+  ],
+  "version": "0.1.0",
+  "license": "BSD-3-Clause",
+  "main": "bin/app.js",
+  "repository": "git@github.com:humamaboalraja/cli-ai.git",
+  "bugs": {
+    "url": "https://github.com/humamaboalraja/cli-ai/issues"
+  },
+  "homepage": "https://github.com/humamaboalraja/cli-ai",
+  "scripts": {
+    "dev": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/app.ts",
+    "build": "tsc -p .",
+    "local": "npm i -g && cli-ai",
+    "refresh": "rm -rf bin ./node_modules ./yarn.lock && yarn install",
+    "lint": "eslint . --ext .ts",
+    "lint-and-fix": "eslint . --ext .ts --fix",
+    "package": "npx pkg ."
+  },
+  "bin": {
+    "cli-ai": "./bin/app.js"
+  },
+  "pkg": {
+    "scripts": "bin/**/*.js",
+    "assets": [
+      "node_modules/figlet/**/*.*",
+      "node_modules/figlet/fonts/Standard.flf"
+    ],
+    "targets": [
+      "node18-linux-x64",
+      "node18-macos-x64",
+      "node18-macos-arm64",
+      "node18-linux-arm64",
+      "node18-win-x64"
+    ],
+    "outputPath": "build"
+  },
+  "dependencies": {
+    "chalk": "4.1.2",
+    "clear": "^0.1.0",
+    "commander": "^9.4.1",
+    "figlet": "^1.5.2",
+    "openai": "^3.1.0",
+    "path": "^0.12.7",
+    "typescript": "^4.9.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20",
+    "@types/node": "^18.11.9",
+    "@types/figlet": "^1.5.5",
+    "@typescript-eslint/eslint-plugin": "^5.45.0",
+    "@typescript-eslint/parser": "^5.45.0",
+    "dotenv": "^16.0.3",
+    "eslint": "^8.28.0",
+    "pkg": "^5.8.0",
+    "ts-node": "^10.9.1"
+  }
+}
