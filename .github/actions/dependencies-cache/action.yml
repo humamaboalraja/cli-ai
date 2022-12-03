@@ -17,12 +17,11 @@ runs:
       id: cache
       uses: actions/cache@v3
       with:
-        path: node_modules
+        path: node_moduless
         key: deps-node-modules-${{ hashFiles('**/yarn.lock') }}
     - name: Install dependencies
       id: install
       if: steps.cache.outputs.cache-hit != 'true' || inputs.caching != 'true'
       run: |
         yarn install --frozen-lockfile
-        echo "::set-output name=cache::'${{ inputs.caching }}'"
       shell: bash
