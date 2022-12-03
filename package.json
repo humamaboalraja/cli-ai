@@ -1,7 +1,7 @@
 {
   "name": "cli-ai",
   "description": "A command line interface client for interacting with OpenAI's GPT3",
-  "author": "Humam Abo Alraja <humamaboalraja@gmail.com>",
+  "author": "humamaboalraja <humamaboalraja@gmail.com>",
   "keywords": [
     "ai",
     "openai",
@@ -31,10 +31,10 @@
     "docker_refresh": "yarn docker_clean && yarn docker_build && yarn docker_run"
   },
   "bin": {
-    "cli-ai": "./bin/app.js"
+    "cli-ai": "./build/app.js"
   },
   "pkg": {
-    "scripts": "bin/**/*.js",
+    "scripts": "build/**/*.js",
     "assets": [
       "node_modules/figlet/**/*.*",
       "node_modules/figlet/fonts/Standard.flf"
@@ -46,7 +46,7 @@
       "node18-linux-arm64",
       "node18-win-x64"
     ],
-    "outputPath": "build"
+    "outputPath": "releases"
   },
   "dependencies": {
     "chalk": "4.1.2",
