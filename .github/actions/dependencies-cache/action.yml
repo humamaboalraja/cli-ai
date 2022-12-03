@@ -1,0 +1,28 @@
+name: 'Cache Dependencies'
+description: 'Get & cache dependencies.'
+inputs:
+  caching:
+    description: 'Caching dependencies options.'
+    required: false
+    default: 'true'
+outputs:
+  used-cache:
+    description: 'Whether the cache was used.'
+    value: ${{ steps.install.outputs.cache }}
+runs:
+  using: 'composite'
+  steps:
+    - name: Cache dependencies
+      if: inputs.caching == 'true'
+      id: cache
+      uses: actions/cache@v3
+      with:
+        path: node_modules
+        key: deps-node-modules-${{ hashFiles('**/yarn.lock') }}
+    - name: Install dependencies
+      id: install
+      if: steps.cache.outputs.cache-hit != 'true' || inputs.caching != 'true'
+      run: |
+        yarn install --frozen-lockfile
+        echo "::set-output name=cache::'${{ inputs.caching }}'"
+      shell: bash
