@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.2](https://github.com/humamaboalraja/cli-ai/compare/0.1.1...0.1.2) (2022-12-03)
+
+
+### build
+
+* Add `NPM` registries `release` pipeline (#3) ([25db32d](https://github.com/humamaboalraja/cli-ai/commit/25db32de62481e5457577125716b71354932d5ac)), closes [#3](https://github.com/humamaboalraja/cli-ai/issues/3)
+
 ## 0.1.1 (2022-12-03)
 
 
