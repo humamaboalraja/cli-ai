@@ -1,4 +1,3 @@
-
 name: Build
 on:
   workflow_dispatch:
@@ -6,16 +5,41 @@ on:
     branches:
       - "main"
 jobs:
-  build:
+  lint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - name: Cached Dependencies action
+        uses: actions/checkout@v3
+      - name: Load & cache dependencies
+        id: cached-dependencies
+        uses: ./.github/actions/dependencies-cache
         with:
-          node-version: 18
-      - name: Install Dependencies
-        run: yarn
-      - name: ESLint
+          caching: 'false'
+      - name: Lint
         run: yarn lint
+  build:
+    needs: lint
+    strategy:
+        matrix:
+          os:
+            - ubuntu-latest
+            - windows-latest
+            - macos-latest
+          node:
+            - 14
+            - 16
+            - 18
+
+    runs-on: ${{ matrix.os }}
+    name: ${{ matrix.os }} (Node v${{ matrix.node }})
+    steps:
+      - uses: actions/checkout@v3
+      - name: Cached Dependencies action
+        uses: actions/checkout@v3
+      - name: Load & cache dependencies
+        id: cached-dependencies
+        uses: ./.github/actions/dependencies-cache
+        with:
+          caching: 'false'
       - name: Build
         run: yarn build
