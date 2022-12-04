@@ -1,5 +1,20 @@
 # Changelog
 
+## [0.1.3](https://github.com/humamaboalraja/cli-ai/compare/0.1.1...0.1.3) (2022-12-04)
+
+
+### build
+
+* Add `NPM` registries `release` pipeline (#3) ([25db32d](https://github.com/humamaboalraja/cli-ai/commit/25db32de62481e5457577125716b71354932d5ac)), closes [#3](https://github.com/humamaboalraja/cli-ai/issues/3)
+
+### chore
+
+* release v0.1.2 ([39b1e81](https://github.com/humamaboalraja/cli-ai/commit/39b1e814bd168906f70e71d2dd15854337007c16))
+
+### fix
+
+* Add `dotenv` to `prod` dependencies (#4) ([c4bfec8](https://github.com/humamaboalraja/cli-ai/commit/c4bfec8916f6f8c1311a510a305ce51c72488b02)), closes [#4](https://github.com/humamaboalraja/cli-ai/issues/4)
+
 ## [0.1.2](https://github.com/humamaboalraja/cli-ai/compare/0.1.1...0.1.2) (2022-12-03)
 
 
