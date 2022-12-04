@@ -58,7 +58,8 @@
     "figlet": "^1.5.2",
     "openai": "^3.1.0",
     "path": "^0.12.7",
-    "typescript": "^4.9.3"
+    "typescript": "^4.9.3",
+    "dotenv": "^16.0.3"
   },
   "devDependencies": {
     "@release-it/conventional-changelog": "^5.1.1",
@@ -66,7 +67,6 @@
     "@types/node": "^18.11.9",
     "@typescript-eslint/eslint-plugin": "^5.45.0",
     "@typescript-eslint/parser": "^5.45.0",
-    "dotenv": "^16.0.3",
     "eslint": "^8.28.0",
     "nodemon": "^2.0.20",
     "pkg": "^5.8.0",
