@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.1](https://github.com/humamaboalraja/cli-ai/compare/0.1.3...0.2.1) (2022-12-09)
+
+
+### feat
+
+* release `v0.2.1` (#5) ([7bddc16](https://github.com/humamaboalraja/cli-ai/commit/7bddc16d383d263edf015724b47c0242204b1e08)), closes [#5](https://github.com/humamaboalraja/cli-ai/issues/5)
+
 ## [0.1.3](https://github.com/humamaboalraja/cli-ai/compare/0.1.1...0.1.3) (2022-12-04)
 
 
