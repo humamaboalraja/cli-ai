@@ -1,12 +1,10 @@
 #!/usr/bin/env node
 import { cli_options } from "./io/io";
-import { render_ui, banner_setup, handle_missing_api_token } from "./ui/cli";
+import { render_cli } from "./ui/cli";
 
-const cli_ai = async () => {
-  banner_setup();
-  handle_missing_api_token();
+const cli_ai = () => {
   cli_options();
-  render_ui();
+  render_cli();
 };
 
 cli_ai();
