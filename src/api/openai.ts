@@ -3,7 +3,7 @@ import {
   CreateCompletionRequestPrompt,
   OpenAIApi,
 } from "openai";
-import { config } from "../config/app";
+import { config, openai_api_options } from "../config";
 import { program } from "commander";
 
 const openai = new OpenAIApi(
@@ -12,12 +12,11 @@ const openai = new OpenAIApi(
 
 const get_result = async (prompt: CreateCompletionRequestPrompt) => {
   const response = await openai.createCompletion({
-    model: program.opts().model || config.openai_api_options.model,
-    temperature:
-      program.opts().temperature || config.openai_api_options.max_tokens,
+    model: program.opts().model || openai_api_options.model,
+    // TODO: Add support for other options
+    ...openai_api_options,
     max_tokens:
-      program.opts().max_tokens || config.openai_api_options.max_tokens,
-    ...config.openai_api_options,
+      Number(program.opts().maxTokens) || openai_api_options.max_tokens,
     prompt: prompt,
   });
   return response.data.choices[0].text;
