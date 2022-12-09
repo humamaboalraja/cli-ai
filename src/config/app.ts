@@ -3,19 +3,12 @@ import dotenv from "dotenv";
 dotenv.config();
 
 const config = {
-  cli_name: process.env.cli_name || "CLI-AI",
-  app_version: process.env.npm_package_version,
+  package_name: process.env.npm_package_name || "cli-ai",
+  package_version: process.env.npm_package_version || "0.1.3",
   openai_api_token: process.env.openai_api_token,
-  openai_api_options: {
-    model: "text-davinci-003",
-    temperature: 0.9,
-    max_tokens: 300,
-    top_p: 1,
-    best_of: 1,
-    frequency_penalty: 0,
-    presence_penalty: 0,
-    stop: [" Human:", " AI:"],
-  },
+  repo_url:
+    process.env.npm_package_bugs_url ||
+    "https://github.com/humamaboalraja/cli-ai/",
 };
 
 export { config };
