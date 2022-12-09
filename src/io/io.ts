@@ -24,6 +24,10 @@ const cli_options = (): Cli => {
       "-mt, --max-tokens <value>",
       "Set words count. default 300"
     );
+    cli.register_option(
+      "-va, --voice-assistant <value>",
+      'Enable voice assistant "active"'
+    );
   } catch (e) {
     console.log(`💥 ${e}\n`);
   }
