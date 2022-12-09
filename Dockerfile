@@ -8,7 +8,6 @@ RUN yarn install
 COPY . .
 
 # Placeholders ENV variables
-ENV cli_name=
 ENV openai_api_token=
 
 # Build the CLI & install it

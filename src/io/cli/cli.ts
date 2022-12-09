@@ -1,4 +1,4 @@
-import { Command } from "commander";
+import { Command, OptionValues } from "commander";
 class Cli {
   private program: Command;
 
@@ -31,6 +31,10 @@ class Cli {
 
   register_option(option_flag: string, option_description: string) {
     this.program.option(option_flag, option_description);
+  }
+
+  getOptionData(option_flag: OptionValues[string]) {
+    return this.program.opts()[option_flag];
   }
 
   initialize() {
