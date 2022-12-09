@@ -27,7 +27,7 @@
     "refresh": "rm -rf bin ./node_modules ./yarn.lock && yarn install",
     "lint": "eslint . --ext .ts",
     "lint-and-fix": "eslint . --ext .ts --fix",
-    "package": "npx pkg .",
+    "package": "npx pkg package.json",
     "docker_clean": "docker container stop cli-ai && docker container rm cli-ai && docker rmi cli-ai --force",
     "docker_build": "docker build -t cli-ai . && docker run --name cli-ai -d cli-ai && docker run cli-ai",
     "docker_run": "docker run cli-ai",
