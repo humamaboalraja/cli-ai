@@ -1,5 +1,24 @@
 # Changelog
 
+## [0.2.2](https://github.com/humamaboalraja/cli-ai/compare/0.1.3...0.2.2) (2022-12-10)
+
+
+### build
+
+* Bump up to `0.2.2` ([0c79e3f](https://github.com/humamaboalraja/cli-ai/commit/0c79e3f8a97d90b3eb8fd1532e916e44680e1c71))
+
+### chore
+
+* release v0.2.1 ([547574f](https://github.com/humamaboalraja/cli-ai/commit/547574f3535dbaf23a6f46a9542f4bf537377339))
+
+### feat
+
+* release `v0.2.1` (#5) ([7bddc16](https://github.com/humamaboalraja/cli-ai/commit/7bddc16d383d263edf015724b47c0242204b1e08)), closes [#5](https://github.com/humamaboalraja/cli-ai/issues/5)
+
+### fix
+
+* Add global upgrade commands ([453fde5](https://github.com/humamaboalraja/cli-ai/commit/453fde508a4bd9116055c95be3699055bbd1bc81))
+
 ## [0.2.1](https://github.com/humamaboalraja/cli-ai/compare/0.1.3...0.2.1) (2022-12-09)
 
 
