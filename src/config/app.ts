@@ -4,7 +4,7 @@ dotenv.config();
 
 const config = {
   package_name: process.env.npm_package_name || "cli-ai",
-  package_version: process.env.npm_package_version || "0.2.1",
+  package_version: process.env.npm_package_version || "0.2.2",
   openai_api_token: process.env.openai_api_token,
   repo_url:
     process.env.npm_package_bugs_url ||
