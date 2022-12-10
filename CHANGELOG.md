@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.2.2](https://github.com/humamaboalraja/cli-ai/compare/0.1.3...0.2.2) (2022-12-10)
+
+
+### build
+
+* Bump up to `0.2.2` ([0c79e3f](https://github.com/humamaboalraja/cli-ai/commit/0c79e3f8a97d90b3eb8fd1532e916e44680e1c71))
+
+
+### fix
+
+* Add global upgrade commands ([453fde5](https://github.com/humamaboalraja/cli-ai/commit/453fde508a4bd9116055c95be3699055bbd1bc81))
+
+
 ## [0.2.1](https://github.com/humamaboalraja/cli-ai/compare/0.1.3...0.2.1) (2022-12-09)
 
 

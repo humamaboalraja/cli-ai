@@ -94,7 +94,7 @@ cli-ai -ask "What is the meaning of life?" -mt 300
 ```
 <small>Tokens are pieces of words. 1,000 tokens are about 750 words. [OpenAI](https://openai.com/api/pricing/)</small>
 
-##### Enable Voice Assistant
+##### Enable Voice Assistant. (Only works on MacOS)
 ```bash
 cli-ai -ask "What is the meaning of life?" -mt 300 --voice-assistant "active"
 cli-ai -ask "What is the meaning of life?" -mt 300 -vt "active"
