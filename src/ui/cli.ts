@@ -62,9 +62,9 @@ const check_updates = () => {
             )} → ${chalk.bold.green(latest_version)}`
           );
           console.log(
-            `↥ run: ${chalk.green("yarn upgrade cli-ai")} or ${chalk.green(
-              "npm update cli-ai"
-            )}\n`
+            `↥ run: ${chalk.green(
+              "yarn global upgrade cli-ai"
+            )} or ${chalk.green("npm update -g cli-ai")}\n`
           );
           divider();
         }
